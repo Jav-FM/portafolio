@@ -1,23 +1,29 @@
 <template>
 <div class="section-content">
-    <div class="title">
-        <h3>Otras experiencias</h3>
+      <SectionsBanner :sectionName="'Otras experiencias'"/>
+        <div class="separation"></div>
+
+<div id="experienceCards">
+    <div class="experienceCard" v-for="({años, cargo, empresa, logo}, i) in otrasexp" :key="i">
+        <img class="experienceLogo" :src="logo" />
+        <p>{{empresa}}</p>
+        <h4 class="textoCargo">{{cargo}}</h4>
+        <p>{{años}}</p>
     </div>
-    <div class="container">
-        <b-list-group class="my-4">
-            <b-list-group-item class="item-experiencia d-flex align-items-center justify-content-between" v-for="({años, cargo, empresa, logo}, i) in otrasexp" :key="i">
-                <div class="d-flex"><p><b class="mx-4">{{años}}</b></p> <p>{{cargo}}</p></div> <div class="d-flex align-items-center"><p>{{empresa}}</p> <img class="mx-4" :src="logo" alt="logo" style="width: 100px; height: auto;"></div>
-            </b-list-group-item>
-        </b-list-group>
-    </div>
+</div>
+
 </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import SectionsBanner from '../components/SectionsBanner.vue'
 
 export default {
     name: "OtrasExp",
+           components: {
+        SectionsBanner,
+    },
     computed: {
         ...mapState(["otrasexp"]),
     }
@@ -25,10 +31,47 @@ export default {
 </script>
 
 <style scoped>
+
+#experienceCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+
+.experienceCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    border: tomato;
+    box-shadow: 3px 3px 10px #bbbbbb;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+}
+
+.experienceLogo {
+    width: 80px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+.textoCargo {
+    font-family: 'Oswald', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 1000px) {
     .item-experiencia {
     flex-direction: column;
     align-items: center;
+    margin-left: 0px;
     }
 }
 

@@ -15,7 +15,7 @@ export default new Vuex.Store({
         imagen: "<i class='fab fa-css3-alt fa-5x'></i>"
       },
       {
-        nombre: "Javascript ES5 y ES6",
+        nombre: "Javascript",
         imagen: "<i class='fab fa-js fa-5x'></i>"
       },
       {
@@ -24,6 +24,10 @@ export default new Vuex.Store({
       },
       {
         nombre: "Vue JS",
+        imagen: "<i class='fab fa-vuejs fa-5x'></i>"
+      },
+      {
+        nombre: "Vuetify",
         imagen: "<i class='fab fa-vuejs fa-5x'></i>"
       },
       {
@@ -47,7 +51,7 @@ export default new Vuex.Store({
         imagen: "<i class='fas fa-circle-notch fa-5x'></i>"
       },
       {
-        nombre: "Firebase Firestore",
+        nombre: "Firebase",
         imagen: "<i class='fas fa-cloud-upload-alt fa-5x'></i>"
       },
     ],
@@ -69,19 +73,7 @@ export default new Vuex.Store({
         cargo: "Analista de Recursos Humanos",
         empresa: "COCHA",
         logo: 'https://i.ibb.co/rFCcPSy/logococha.jpg',
-      },
-      {
-        años: "2014-2015",
-        cargo: "Consultora de Selección",
-        empresa: "Consultoras Nacionales",
-        logo: 'https://i.ibb.co/30Y8SXR/asesorialogo.png',
-      },
-      {
-        años: "2013-2014",
-        cargo: "Práctica Selección",
-        empresa: "Banco BCI",
-        logo: 'https://i.ibb.co/XtrYFYd/bcilogo.png',
-      },
+      }
     ],
     proyectos: [
       {
@@ -89,12 +81,6 @@ export default new Vuex.Store({
         foto: "https://i.ibb.co/HKN6f47/capturalfaweb.jpg",
         descripcion: "Aplicación creada con VueJS y Firebase, permite crear un usuario, ingresar y administrar cursos a través de un CRUD.",
         link: "https://alfaweb.netlify.app/"
-      },
-      {
-        nombre: "Hyrule Store",
-        foto: "https://i.ibb.co/DkS16Tr/capturahyrulestore.jpg",
-        descripcion: "Vitrina de productos con buscador en base a distintos criterios, desarrollada con VueJS.",
-        link: "https://hyrulestore.netlify.app/"
       },
       {
         nombre: "Random Gif Cat",
@@ -119,12 +105,6 @@ export default new Vuex.Store({
         foto: "https://i.ibb.co/Lh9wd14/capturacalculadora.jpg",
         descripcion: "Calculadora básica creada con Javascript durante curso de fundamentos.",
         link: "https://jav-fm.github.io/calculadora/"
-      },
-      {
-        nombre: "Kill the fly",
-        foto: "https://i.ibb.co/6bKjKk3/capturakillthefly.jpg",
-        descripcion: "Juego creado en curso de Fundamentos de Javascript, con contador de puntos.",
-        link: "https://jav-fm.github.io/killthefly/"
       },
       {
         nombre: "Cursos 2020",

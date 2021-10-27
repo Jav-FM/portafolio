@@ -1,13 +1,12 @@
 <template>
   <div class="section-content">
-    <div class="title">
-      <h3>Portafolio</h3>
-    </div>
+      <SectionsBanner :sectionName="'Portafolio'"/>
+        <div class="separation"></div>
 
     <!--Proyecto final-->
-    <h4>Proyecto de título carrera Desarrollo Front End Vue</h4>
+    <h2>Proyecto de título carrera Desarrollo Front End Vue</h2>
     <div id="proyecto-final" class="d-flex justify-content-center align-items-center m-3 p-0">
-      <b-card no-body class="overflow-hidden" style="max-width: 700px;">
+      <b-card no-body class="overflow-hidden d-flex justify-content-center" style="max-width: 850px; min-height: 260px;">
         <b-row no-gutters>
           <b-col md="6" class="d-flex align-items-center">
             <b-card-img
@@ -24,8 +23,8 @@
                 Este fue el <b>proyecto final</b> de la carrera Desarrollo Front
                 End Vue en Academia Desafío Latam. ¡Te invito a conocerlo!
               </b-card-text>
-                  <b-button variant="info" v-b-modal.modal-proyectofinal
-                >Ver detalles</b-button
+                  <b-button class="botonCeleste" id="botonProyecto" onmousedown="event.preventDefault()" v-b-modal.modal-proyectofinal
+                >Ver más</b-button
               >
               </div>
         
@@ -72,11 +71,11 @@
     </div>
 
     <!--Galeria de otros proyectos-->
-    <h4>Otros proyectos</h4>
-    <p id="en-construccion">En construcción. Pronto habrá más proyectos en esta sección!</p>
+    <h3>Otros proyectos</h3>
     <div id="galeria-proyectos" class="container d-flex flex-wrap justify-content-around">
 <b-card v-for="({nombre, foto, descripcion, link}, i) in proyectos" :key="i"
     :title="nombre"
+    title-tag="h5"
     :img-src="foto"
     img-alt="Image"
     img-top
@@ -88,7 +87,7 @@
       {{descripcion}}
     </b-card-text>
 
-    <b-button :href="link" target="_blank" variant="info" style="position: absolute; bottom: 0; left: 34%;" class="my-3" >Ir al sitio</b-button>
+    <b-button :href="link" target="_blank" onmousedown="event.preventDefault()" style="position: absolute; bottom: 0; left: 34%;" class="botonCeleste my-3" >Ir al sitio</b-button>
     
   </b-card>
     </div>
@@ -97,9 +96,13 @@
 
 <script>
 import { mapState } from 'vuex'
+import SectionsBanner from '../components/SectionsBanner.vue'
 
 export default {
     name: "Portafolio",
+       components: {
+        SectionsBanner,
+    },
     computed: {
         ...mapState(["proyectos"]),
     }
@@ -111,18 +114,23 @@ export default {
   text-align: justify;
 }
 
-h4 {
+h2, h3 {
+      font-family: 'Oswald', sans-serif;
+  font-weight: 900;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
-#en-construccion {
-    text-align: center;
-}
-
 .descripcion-proyecto {
     text-align: justify;
+}
+
+#botonProyecto {
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 

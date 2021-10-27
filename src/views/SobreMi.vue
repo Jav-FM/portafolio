@@ -1,9 +1,8 @@
 <template>
-    <div class="section-content">
-        <div class="title">
-        <h3>Sobre mí</h3>
-        </div>
-        <div id="contenido-sobremi" class="container d-flex mt-2">
+<div class="section-content">
+  <SectionsBanner :sectionName="'Sobre mí'"/>
+  <div class="separation"></div>
+        <div id="contenido-sobremi" class="container d-flex mt-4 justify-content-between">
             <img id="profile-img" src="../assets/espejo.jpg" alt="Imagen profile">
             <div id="texto-sobremi" class="m-4">
                 <p>Mi nombre es <b>Javiera Fortunato</b>, nací en Santiago (Chile) el 3 de Octubre de 1989. Me titulé como Psicóloga el año 2014 y desde entonces he trabajo en áreas de Selección y Desarrollo Organizacional en distintas organizaciones nacionales. Finalicé recientemente la carrera de Desarrollo Front End Vue y actualmente me desempeño como Ayudante Docente en módulos de Vue JS en <b>Academia Desafío Latam</b>, donde cursé mis estudios.</p>
@@ -15,6 +14,16 @@
     </div>
 </template>
 
+<script>
+import SectionsBanner from '../components/SectionsBanner.vue'
+export default {
+    name: "SobreMi",
+    components: {
+        SectionsBanner,
+    }
+}
+</script>
+
 <style scoped>
 #profile-img {
     width: 400px;
@@ -24,11 +33,13 @@
 
 #texto-sobremi {
     text-align: justify;
+    max-width: 550px;
+    color: #212121;
 }
 
 b {
-  text-decoration: none;
-  color:#17a2b8;
+  text-decoration: none !important;
+  color:#0097D8 !important;
 }
 
 @media only screen and (max-width: 1000px) {
