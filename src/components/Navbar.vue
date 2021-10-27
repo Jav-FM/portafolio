@@ -65,6 +65,10 @@
   margin-left: 10px;
 }
 
+#brandName:hover {
+  color: #9FE2FF;
+}
+
 #contactButton {
   background-color: white;
   color: #00567A;
@@ -75,6 +79,11 @@
   margin-left: 15px;
   margin-right: 10px;
 }
+
+#contactButton:hover {
+  background-color: #9FE2FF;
+}
+
 
 @media screen and (max-width: 991px) {
   /* #iconos-contacto {
@@ -92,17 +101,14 @@
   }
 
   #contactButton {
-  background-color: white;
-  color: #00567A;
-  font-weight: 600;
-  border: #00567A;
-  height: 40px;
-  width: 90px;
   margin-left: 0px;
   margin-right: 0px;
   margin-top: 10px;
   }
 
+  #contactButton:hover {
+  background-color: #9FE2FF !important;
+  }
 
 }
 </style>

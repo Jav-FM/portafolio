@@ -28,10 +28,6 @@ export default {
 
 <style lang="scss">
 
-body {
-  height: 100vh;
-  background-color: #00567a;
-}
 
 #content {
   min-height: 88.7vh;

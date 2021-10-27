@@ -29,6 +29,12 @@ b {
   color:#0097D8 !important;
 }
 
+h5 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
+  padding-bottom: 15px;
+}
+
 .texto-justificado {
   text-align: justify;
 }
